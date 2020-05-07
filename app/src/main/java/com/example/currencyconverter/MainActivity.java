@@ -14,9 +14,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void convertCurrency(View view) {
         EditText dollarsEditText = (EditText) findViewById(R.id.dollarsEditText);
-        Double dollarsDbl = Double.parseDouble(dollarsEditText.getText().toString());
+        double dollarsDbl = Double.parseDouble(dollarsEditText.getText().toString());
         String dollarsStr = String.format("$%.2f", dollarsDbl);
-        Double poundsDbl = dollarsDbl * .81;
+        double poundsDbl = dollarsDbl * .81;
         String poundsStr = String.format("£%.2f", poundsDbl);
 
         Toast.makeText(this, dollarsStr + " is " + poundsStr , Toast.LENGTH_LONG).show();
